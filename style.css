@@ -1,0 +1,560 @@
+/*Cascading style sheet code*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(224, 214, 214);
+    box-sizing: border-box;
+}
+
+.Navition-bar {
+    width: 100%;
+    background: white;
+    height: 70px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.Navition-bar .NavLinks {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+
+.Navition-bar .NavLinks li {
+    margin: 8%;
+}
+
+.Navition-bar .NavLinks li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: DodgerBlue;
+}
+
+.Navition-bar .NavLinks li a:hover {
+    color: blue;
+    transition: 0.2s;
+}
+
+.Navition-bar .NavLinks li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: Dodgerblue;
+    display: block;
+    text-align: center;
+}
+
+.Navition-bar .NavLinks li:hover::after {
+    transition: 0.7s;
+    width: 100%;
+}
+
+.Navition-bar .head-btn {
+    padding: 1% 3% 1% 3%;
+    margin: 3%;
+    background: transparent;
+    border: none;
+    border: 1px solid blue;
+    color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Navition-bar .image {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 80%;
+}
+
+.Navition-bar .head-image {
+    width: 150px;
+}
+@media (max-width:668px) {
+    .Navition-bar .image {
+        display: none;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width:600px) {
+    .Navition-bar .NavLinks {
+        flex-direction: column;
+        transition: 0.5s;
+    }
+    .Navition-bar .NavLinks li a{
+        font-size:30px;
+    }
+    .Navition-bar {
+        justify-content: center;
+        align-items: center;
+        height: 32vh;
+        transition: 0.5s;
+    }
+
+    .Navition-bar .head-btn {
+        display: none;
+    }
+}
+
+.text-container {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url('images/back.jpg');
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: center;
+}
+
+.text {
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.text h1 {
+    font-size: 40px;
+    text-shadow: 3px 2px 8px black;
+}
+
+.text p {
+    font-size: 19px;
+    text-shadow: 2px 1px 5px black;
+}
+
+.text .top-btn-1 {
+    padding: 0.9% 1.5% 0.9% 1.5%;
+    background: rgb(5, 5, 110);
+    color: white;
+    border: 2px solid rgb(5, 5, 110);
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+.text .top-btn-2 {
+    padding: 0.9% 1.5% 0.9% 1.5%;
+    color: white;
+    margin-top: 1%;
+    background: gold;
+    border: 2px solid gold;
+    border-radius: 5px;
+}
+
+.text .top-btn-1:hover {
+    color: blue;
+    background: white;
+    border: 2px solid white;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.text .top-btn-2:hover {
+    color: black;
+    background: white;
+    border: 2px solid white;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.down-text-container .feature .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.down-text-container .feature .row .col-1 {
+    width: 30%;
+    background-color: lavender;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.down-text-container .feature .row .col-1:hover {
+    box-shadow: 0 0 20px 5px grey;
+    transition: 0.8s;
+}
+
+.down-text-container .feature .row .col-1 i {
+    font-size: 50px;
+    padding: 1%;
+}
+
+.down-text-container .feature .row .col-1 p {
+    margin: 1%;
+}
+
+.down-text-container .feature .row .col-1 h1 {
+    margin: 1%;
+}
+
+.heading-one {
+    text-align: Center;
+    padding: 1%;
+    margin: 2%;
+}
+
+.heading-one h1 {
+    font-size: 35px;
+    color: purple;
+}
+
+@media (max-width:900px) {
+    .down-text-container .feature .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .down-text-container .feature .row .col-1 {
+        width: 80%;
+        margin: 2%;
+        font-size: 22px;
+    }
+}
+
+.cources-main-container .cources .row-1 {
+    display: flex;
+    margin-top: 2%;
+    position: relative;
+    justify-content: space-around;
+}
+
+.cources-main-container .cources .row-1 .col {
+    text-align: center;
+    position: relative;
+    width: 30%;
+}
+
+.cources-main-container .cources .row-1 .col .cost {
+    background: DodgerBlue;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 5%;
+    top: 65%;
+}
+
+.cources-main-container .cources .row-1 .col i {
+    color: rgb(216, 191, 46);
+}
+
+.cources-main-container .cources .row-1 .col img {
+    width: 100%;
+    height: 240px;
+}
+
+.cources-main-container .cources .row-1 .col p {
+    opacity: 0.7;
+}
+
+.cources-main-container .cources .row-2 {
+    display: flex;
+    margin-top: 2%;
+    position: relative;
+    justify-content: space-around;
+}
+
+.cources-main-container .cources .row-2 .col {
+    text-align: center;
+    width: 30%;
+    position: relative;
+}
+
+.cources-main-container .cources .row-2 .col .cost {
+    background: Dodgerblue;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 5%;
+    top: 65%;
+}
+
+.cources-main-container .cources .row-2 .col i {
+    color: rgb(216, 191, 46);
+}
+
+.cources-main-container .cources .row-2 .col p {
+    opacity: 0.7;
+}
+
+.cources-main-container .cources .row-2 .col img {
+    width: 100%;
+    height: 240px;
+}
+
+@media (max-width:850px) {
+    .cources-main-container .cources .row-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cources-main-container .cources .row-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cources-main-container .cources .row-1 .col {
+        width: 90%;
+    }
+
+    .cources-main-container .cources .row-1 .col img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cources-main-container .cources .row-2 .col img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cources-main-container .cources .row-2 .col {
+        width: 90%;
+    }
+}
+
+.contact-container {
+    background-image: linear-gradient(rgba(7, 4, 30, 0.5), rgba(7, 4, 30, 0.5)), url('images/signup.jpg');
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-container .main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-container .register {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.contact-container .register .docs {
+    width: 80px;
+    height: auto;
+    background: transparent;
+    margin-left: 5%;
+    color: white;
+    border: 1px solid white;
+    margin-top: 3%;
+    border-radius: 10%;
+    padding: 2%;
+}
+
+.contact-container .register p {
+    color: white;
+}
+
+.contact-container .register h1 {
+    color: white;
+    margin: 1%;
+}
+
+.contact-container .register .docs-main {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.contact-container .contact {
+    border: 1px solid blue;
+    padding: 3%;
+    background: white;
+    opacity: 0.8;
+    overflow: hidden;
+    margin-top: 5%;
+    margin-bottom: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.contact-container .contact .input {
+    padding: 7%;
+    margin-top: 10%;
+    outline: none;
+    border: 1px solid black;
+    width: 250px;
+}
+
+.contact-container .contact .send-btn {
+    margin: 5%;
+    margin-bottom: 0;
+    padding: 5% 10% 5% 10%;
+    border: none;
+    color: white;
+    margin-bottom: 0;
+    background: gold;
+    cursor: pointer;
+}
+
+.contact h1 {
+    color: black;
+    text-transform: capitalize;
+}
+
+@media (max-width:990px) {
+    .contact-container .contact {
+        margin-top: 15%;
+    }
+
+    .contact-container .register {
+        margin-top: 25%;
+    }
+
+    .contact-container {
+        height: 110vh;
+    }
+
+    .contact-container .main {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width:750px) {
+    .contact-container .main {
+        flex-direction: column;
+    }
+
+    .contact-container .register {
+        margin: 2%;
+    }
+
+    .contact-container .register .docs {
+        margin: 0;
+    }
+}
+
+.experts .main-experts {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 5%;
+    flex-wrap: wrap;
+}
+
+.icons {
+    margin: 2%;
+}
+
+.icons i {
+    padding: 5%;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
+
+.icons i:hover {
+    background: DodgerBlue;
+    transition: 0.5s;
+    color: white;
+    cursor: pointer;
+}
+
+.experts-1 h1 {
+    border: 50px solid blue;
+}
+
+.footer-section {
+    background-color: rgb(62, 62, 65);
+}
+
+.footer-section .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section .main {
+    padding: 8%;
+    padding-bottom: 4%;
+}
+
+.footer-section .main .footer-1 h1 {
+    color: white;
+    font-size: 22px;
+}
+
+.footer-section .main .footer-1 p {
+    color: white;
+    opacity: 0.5;
+    margin-top: 20%;
+}
+.footer-section .main .footer-1 p:hover{
+    opacity:1;
+}
+.footer-section .main .footer-1 .sub {
+    display: Flex;
+    margin-top: 10%;
+}
+
+.footer-section .main .footer-1 .search {
+    padding: 3.5%;
+    outline: none;
+    border: none;
+    margin-right: 1%;
+    border: 1px solid grey;
+}
+
+.footer-section .main .footer-1 .btn-email {
+    padding: 2% 3% 2% 3%;
+    background: gold;
+    color: black;
+    border: none;
+}
+
+.footer-section .main .footer-1 .btn-email:hover {
+    padding: 4%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icons-2 {
+    margin-top: 20%;
+    margin-left: 30%;
+}
+
+.icons-2 i {
+    padding: 5%;
+    border-radius: 3px;
+    border: 1px solid grey;
+    color: white;
+}
+
+.icons-2 i:hover {
+    background: DodgerBlue;
+    transition: 0.5s;
+    color: white;
+    cursor: pointer;
+}
+
+.footer-section .copy {
+    color: white;
+    opacity: 0.8;
+    padding-bottom: 5%;
+    margin-left: 10%;
+}
+@media (max-width:325px){
+    .footer-section .main .footer-1 .sub{
+        flex-direction:column;
+        margin-top:5%;
+    }
+}

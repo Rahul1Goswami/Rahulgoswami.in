@@ -1,0 +1,161 @@
+/*Cascading style sheet code*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(224, 214, 214);
+    box-sizing: border-box;
+}
+
+.Navition-bar {
+    width: 100%;
+    background: white;
+    height: 70px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.Navition-bar .NavLinks {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+}
+
+.Navition-bar .NavLinks li {
+    margin: 8%;
+}
+
+.Navition-bar .NavLinks li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: DodgerBlue;
+}
+
+.Navition-bar .NavLinks li a:hover {
+    color: blue;
+    transition: 0.2s;
+}
+
+.Navition-bar .NavLinks li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: Dodgerblue;
+    display: block;
+    text-align: center;
+}
+
+.Navition-bar .NavLinks li:hover::after {
+    transition: 0.7s;
+    width: 100%;
+}
+
+.Navition-bar .head-btn {
+    padding: 1% 3% 1% 3%;
+    margin: 3%;
+    background: transparent;
+    border: none;
+    border: 1px solid blue;
+    color: blue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Navition-bar .image {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 80%;
+}
+
+.Navition-bar .head-image {
+    width: 150px;
+}
+
+@media (max-width:768px) {
+    .Navition-bar .image {
+        display: none;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width:500px) {
+    .Navition-bar .NavLinks {
+        flex-direction: column;
+        transition: 0.5s;
+    }
+
+    .Navition-bar {
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        transition: 0.5s;
+    }
+
+    .Navition-bar .head-btn {
+        display: none;
+    }
+}
+
+.text-container {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url('images/back1.jpg');
+    height: 70vh;
+    width: 100%;
+    background-position: center;
+    background-size: center;
+}
+
+.text {
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.text h1 {
+    font-size: 50px;
+    text-shadow: 3px 2px 8px black;
+}
+
+.text .top-btn-1 {
+    padding: 0.9% 1.5% 0.9% 1.5%;
+    background: rgb(5, 5, 110);
+    color: white;
+    border: 2px solid rgb(5, 5, 110);
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+.text .top-btn-2 {
+    padding: 0.9% 1.5% 0.9% 1.5%;
+    color: white;
+    margin-top: 1%;
+    background: gold;
+    border: 2px solid gold;
+    border-radius: 5px;
+}
+
+.text .top-btn-1:hover {
+    color: blue;
+    background: white;
+    border: 2px solid white;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.text .top-btn-2:hover {
+    color: black;
+    background: white;
+    border: 2px solid white;
+    transition: 0.8s;
+    cursor: pointer;
+}
